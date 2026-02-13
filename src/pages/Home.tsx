@@ -21,7 +21,7 @@ export default function Home() {
         <div className="text-center space-y-2">
           <div className="inline-flex items-center gap-2 text-accent">
             <Sparkles className="w-5 h-5" />
-            <span className="text-sm font-medium">เรียนทุกวัน</span>
+            <span className="text-sm font-medium">เรียนทุกวัน เก่งขึ้นทุกวัน</span>
           </div>
           <h1 className="text-2xl font-bold text-foreground">คำศัพท์วันนี้</h1>
           <p className="text-sm text-muted-foreground">{today}</p>
@@ -33,7 +33,7 @@ export default function Home() {
             <div className="text-3xl font-bold text-primary">
               {completed ? "10" : "0"}/10
             </div>
-            <p className="text-xs text-muted-foreground mt-1">เรียนวันนี้</p>
+            <p className="text-xs text-muted-foreground mt-1">คำศัพท์วันนี้</p>
           </div>
           <div className="bg-card rounded-2xl p-4 text-center shadow-sm">
             <div className="text-3xl font-bold text-accent flex items-center justify-center gap-1">
@@ -64,7 +64,22 @@ export default function Home() {
             ✅ เรียนครบแล้ววันนี้ เก่งมาก!
           </p>
         )}
-      </div>
+
+
+
+
+  
+
+    {/* เพิ่มส่วนข้อมูลติดต่อเล็กๆ ตรงนี้ */}
+    <div className="fixed bottom-24 right-6 text-[10px] text-slate-400 text-right">
+        <p>พบเจอปัญหา หรือ อยากเลี้ยงกาแฟ</p>
+        <p>ติดต่อได้ที่นี้: support@example.com</p>
+          
     </div>
+  </div>
+</div>
+
+      
+    
   );
 }

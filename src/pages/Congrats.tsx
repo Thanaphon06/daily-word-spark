@@ -13,7 +13,7 @@ export default function Congrats() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 pb-12">
       <div className="text-center space-y-6 max-w-sm">
-        <div className="text-6xl mb-2">🎉</div>
+        {/* <div className="text-6xl mb-2">🎉</div> */}
         <PartyPopper className="w-12 h-12 text-accent mx-auto" />
         <h1 className="text-2xl font-bold text-foreground">
           ยินดีด้วย!

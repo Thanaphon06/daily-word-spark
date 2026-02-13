@@ -95,7 +95,7 @@ export default function Learned() {
     <div className="min-h-screen pb-24 px-4 pt-8">
       <div className="max-w-md mx-auto space-y-4">
         <h1 className="text-xl font-bold text-foreground">
-          คำที่เรียนแล้ว ({allWords.length} คำ)
+          คำที่เรียนแล้ว
         </h1>
 
         {/* Calendar */}
@@ -184,11 +184,7 @@ export default function Learned() {
           </div>
         )}
 
-        {wordsForSelectedDate.length > 0 && (
-          <div className="text-center text-sm text-muted-foreground">
-            เรียนไปแล้ว {wordsForSelectedDate.length} คำ
-          </div>
-        )}
+
       </div>
     </div>
   );
