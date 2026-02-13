@@ -3,10 +3,13 @@ import { wordDatabase, Word } from "@/data/words";
 const STORAGE_KEY = "vocabDaily";
 
 interface AppState {
-  dailySets: Record<string, number[]>; // date -> word ids
+  dailySets: Record<string, number[]>;
   completedDates: string[];
   learnedWordIds: number[];
+  theme?: 'light' | 'dark'; 
 }
+
+
 
 function getState(): AppState {
   try {
@@ -85,4 +88,16 @@ export function getLearnedWords(): Word[] {
 
 export function getTotalLearnedCount(): number {
   return getState().learnedWordIds.length;
+}
+
+// 2. เพิ่มฟังก์ชันสำหรับ Theme ด้านล่างสุดของไฟล์
+export function getStoredTheme(): 'light' | 'dark' {
+  const state = getState();
+  return state.theme || 'light';
+}
+
+export function setStoredTheme(theme: 'light' | 'dark') {
+  const state = getState();
+  state.theme = theme;
+  setState(state);
 }

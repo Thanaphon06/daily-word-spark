@@ -3,50 +3,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
+สีที่ใช้ 
+ขาวพื้นหลัง 32, 29%, 87%
+สีเนื้อ 23, 42%, 76%
+สีส้ม 21, 100%, 57%
+สีน้ำเงิน 229, 38%, 37%
+น้ำเงินกว้่า 231, 33%, 23%
+ดำสุด 225, 6%, 13%
+*/
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 220 20% 15%;
+    /* --- โหมดสว่าง (Light Mode) : สะอาด สบายตา --- */
+    
+    /* พื้นหลังสีขาวอมฟ้านิดๆ ไม่ขาวจั๊วะ แสบตา */
+    --background: 32, 29%, 87%; 
+    /* สีตัวอักษรหลัก สีเทาเข้มเกือบดำ */
+    --foreground: 222 47% 11%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    /* การ์ดและ Popover ใช้สีเดียวกับพื้นหลัง */
+    --card: 0 30% 95%;
+    --card-foreground: 222 47% 11%;
+    --popover: 210 40% 98%;
+    --popover-foreground: 222 47% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    /* --- สีหลัก (ปุ่มสำคัญ) : สีทีลเข้ม (Rich Teal) --- */
+    /* ดูหรูหราและทันสมัยกว่าสีเขียวเดิม */
+    --primary: 229, 38%, 37%;
+    --primary-foreground: 210 40% 98%; /* ตัวอักษรบนปุ่มสีขาว */
 
-    --primary: 160 45% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* สีรอง (ปุ่มที่ไม่สำคัญมาก) */
+    --secondary: 210 40% 93%;
+    --secondary-foreground: 222 47% 11%;
 
-    --secondary: 40 30% 90%;
-    --secondary-foreground: 220 20% 20%;
+    /* สีเทาๆ สำหรับของที่ถูกปิดใช้งาน หรือข้อความเสริม */
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 16% 47%;
 
-    --muted: 40 20% 92%;
-    --muted-foreground: 220 10% 50%;
+    /* สี Accent สำหรับการ Hover หรือเลือก */
+    --accent: 20, 100%, 55%;
+    --accent-foreground: 222 47% 11%;
 
-    --accent: 35 90% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
+    /* สีแดงสำหรับแจ้งเตือน/ลบ */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 160 45% 45%;
+    /* เส้นขอบ */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    /* วงแหวนเวลาโฟกัส ให้เป็นสีเดียวกับ Primary */
+    --ring: 173 90% 35%;
 
-    --radius: 1rem;
+    --radius: 0.75rem; /* ปรับมุมให้โค้งมนขึ้นอีกนิด */
+  }
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  .dark {
+    /* --- โหมดมืด (Dark Mode) : ลึกลับ คอนทราสต์ดี --- */
 
-    --success: 145 60% 42%;
-    --success-foreground: 0 0% 100%;
+    /* พื้นหลังสีกรมท่าเข้ม (Deep Slate Blue) ไม่ดำสนิท ทำให้อ่านง่าย */
+    --background: 231, 33%, 23%;
+    /* สีตัวอักษรหลัก สีขาวอมฟ้า */
+    --foreground: 32, 29%, 87%;
+
+    /* การ์ดให้สีสว่างกว่าพื้นหลังนิดหน่อย เพื่อให้ดูลอยออกมา */
+    --card: 217 33% 17%;
+    --card-foreground: 32, 29%, 87%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 32, 29%, 87%;
+
+    /* --- สีหลัก (ปุ่มสำคัญ) ในโหมดมืด --- */
+    /* ปรับให้สว่างขึ้นและสดใสขึ้น เพื่อให้เด่นบนพื้นหลังมืด */
+    --primary: 23, 42%, 76%;
+    --primary-foreground: 231, 33%, 23%; /* ตัวอักษรบนปุ่มกลับไปเป็นสีเข้ม */
+
+    /* สีรอง */
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 32, 29%, 87%;
+
+    /* สีเทาๆ */
+    --muted: 217 33% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent */
+    --accent: 21, 100%, 57%;
+    --accent-foreground: 32, 29%, 87%;
+
+    /* สีแดง */
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 32, 29%, 87%;
+
+    /* เส้นขอบ */
+    --border: 217 33% 25%;
+    --input: 217 33% 25%;
+    /* วงแหวนโฟกัส */
+    --ring: 173 80% 55%;
   }
 }
 
