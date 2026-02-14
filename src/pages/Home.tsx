@@ -71,10 +71,15 @@ export default function Home() {
   
 
     {/* เพิ่มส่วนข้อมูลติดต่อเล็กๆ ตรงนี้ */}
-    <div className="fixed bottom-24 right-6 text-[10px] text-slate-400 text-right">
+        <div className="fixed bottom-24 right-6 text-[10px] text-slate-400 text-right">
+        <img 
+          src="qrcode_discord.png" 
+          alt="Contact" 
+          className="w-20 h-20 mt-2 object-contain ml-auto rounded-lg border border-border" 
+        />
         <p>พบเจอปัญหา หรือ อยากเลี้ยงกาแฟ</p>
-        <p>ติดต่อได้ที่นี้: support@example.com</p>
-          
+        <p>ติดต่อได้ที่นี้: https://discord.gg/h3F5u3EpPq</p>
+
     </div>
   </div>
 </div>
